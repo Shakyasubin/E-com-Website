@@ -89,6 +89,7 @@ body {
 /* <!-- Hero --> */
 .hero {
   background: url(./assets/hero.jpg) center;
+  background-position: bottom;
   height: 70vh;
   display: flex;
 }

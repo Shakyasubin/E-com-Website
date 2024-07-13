@@ -15,29 +15,69 @@ body {
 /* <!-- Global Header --> */
 .global {
   background: rgb(232, 241, 196);
+  height: 5vh;
 }
 
 .global > .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 5vh;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 25px;
+  position: relative;
+}
+
+.dis {
+  position: absolute;
+  /* right: 0%;
+  left: 70%; */
+
+  animation: move 5s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% {
+    right: 0%;
+    left: 70%;
+  }
+
+  25% {
+    color: red;
+  }
+
+  50% {
+    left: 40%;
+    right: 30%;
+    color: blue;
+  }
+
+  75% {
+    color: green;
+  }
+
+  100% {
+    right: 70%;
+    left: 0%;
+  }
 }
 
 /* <!-- Header --> */
-header > .container {
+
+.sticky {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
+  height: 7vh;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
   display: flex;
-  height: 10vh;
+  height: 7vh;
 }
 
 .logo img {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .container ul {
@@ -68,6 +108,7 @@ header > .container {
   justify-content: flex-end;
   align-items: flex-end;
   padding: 20px;
+  backdrop-filter: blur(10px);
 }
 
 .title h1 {
